@@ -73,4 +73,9 @@ public class MeterRead implements NEM12Entry {
     public BigDecimal getTotalVolume() {
         return volumes.values().stream().map(mr -> mr.getVolume()).reduce(BigDecimal.ZERO, BigDecimal::add);
     }
+
+	@Override
+	public boolean isMeterReadEntry() {
+		return true;
+	}
 }

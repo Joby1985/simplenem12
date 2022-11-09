@@ -60,4 +60,9 @@ public class MeterVolume implements NEM12Entry {
     public int hashCode() {
         return Objects.hash(getVolume(), getQuality(), getDate());
     }
+
+	@Override
+	public boolean isMeterReadEntry() {
+		return false;
+	}
 }

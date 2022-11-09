@@ -32,7 +32,7 @@ public class SimpleNem12ParserImpl implements SimpleNem12Parser {
                 for (String data : readNEM12Data) {
                     NEM12Entry nem12Entry = prepareNEM12Entry(data);
                     if (nem12Entry != null) {
-                        if (nem12Entry instanceof MeterRead) {
+                        if (nem12Entry.isMeterReadEntry()) {
                             lastReadMeter = (MeterRead) nem12Entry;
                             meterReads.add(lastReadMeter);
                         } else {
